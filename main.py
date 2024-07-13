@@ -28,5 +28,5 @@ def enviar_email(cotacao):
     s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
     print('Email enviado')
 
-if cotacao <= 5.30:
+if cotacao > 5.30:
     enviar_email(cotacao)
